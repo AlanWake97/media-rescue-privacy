@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>html{color-scheme:light}body{margin:0;font:14px/1.5 system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Media Rescue Privacy Policy</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<style>
+  :root {
+    --bg: #f6f8f8;
+    --surface: #ffffff;
+    --ink: #121f1e;
+    --muted: #5a6b69;
+    --accent: #00695c;
+    --accent-soft: #e4efed;
+    --line: #dbe4e3;
+    --radius: 10px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --bg: #0f1514;
+      --surface: #171f1e;
+      --ink: #e7edec;
+      --muted: #9aa9a7;
+      --accent: #59c2b6;
+      --accent-soft: #1b2a28;
+      --line: #263130;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --bg: #0f1514;
+    --surface: #171f1e;
+    --ink: #e7edec;
+    --muted: #9aa9a7;
+    --accent: #59c2b6;
+    --accent-soft: #1b2a28;
+    --line: #263130;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  .bar {
+    position: sticky;
+    top: env(safe-area-inset-top, 0px);
+    z-index: 5;
+    background: color-mix(in srgb, var(--bg) 92%, transparent);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  .bar-inner {
+    max-width: 46rem;
+    margin: 0 auto;
+    padding: 0.6rem 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .brand {
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.01em;
+  }
+  .brand span { color: var(--muted); font-weight: 400; }
+
+  .langs { display: flex; gap: 0.25rem; }
+  .langs button {
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+    background: transparent;
+    border: 1px solid var(--line);
+    border-radius: 99px;
+    padding: 0.3rem 0.7rem;
+    cursor: pointer;
+  }
+  .langs button[aria-pressed="true"] {
+    color: var(--accent);
+    border-color: var(--accent);
+    background: var(--accent-soft);
+  }
+  .langs button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  main {
+    max-width: 46rem;
+    margin: 0 auto;
+    padding-block: 2.5rem 4rem;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  h1 {
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    font-weight: 600;
+    font-size: clamp(1.6rem, 5vw, 2.1rem);
+    line-height: 1.2;
+    letter-spacing: -0.015em;
+    text-wrap: balance;
+    margin: 0 0 0.4rem;
+  }
+  h2 {
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    letter-spacing: -0.005em;
+    text-wrap: balance;
+    margin: 2.4rem 0 0.7rem;
+    padding-top: 1.4rem;
+    border-top: 1px solid var(--line);
+  }
+  p { margin: 0 0 1rem; }
+  ul { margin: 0 0 1rem; padding-left: 1.2rem; }
+  li { margin-bottom: 0.35rem; }
+  strong { font-weight: 600; }
+  code {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 0.86em;
+    background: var(--accent-soft);
+    color: var(--accent);
+    padding: 0.1em 0.35em;
+    border-radius: 4px;
+  }
+
+  .meta {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 1.1rem 1.25rem;
+    margin: 1.75rem 0 0;
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 0.45rem 1.25rem;
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    font-size: 0.875rem;
+  }
+  .meta dt {
+    color: var(--muted);
+    font-size: 0.72rem;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    align-self: baseline;
+  }
+  .meta dd { margin: 0; overflow-wrap: anywhere; }
+  @media (max-width: 30rem) {
+    .meta { grid-template-columns: 1fr; gap: 0.15rem; }
+    .meta dd { margin-bottom: 0.7rem; }
+  }
+
+  .lede {
+    font-size: 1.15rem;
+    line-height: 1.55;
+    color: var(--ink);
+    margin-top: 1.75rem;
+  }
+
+  .scroll { overflow-x: auto; margin: 0 0 1.25rem; }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 26rem;
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    font-size: 0.86rem;
+  }
+  th, td {
+    text-align: left;
+    vertical-align: top;
+    padding: 0.6rem 0.8rem;
+    border-bottom: 1px solid var(--line);
+  }
+  th {
+    font-weight: 600;
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  td:last-child { white-space: nowrap; color: var(--accent); font-weight: 500; }
+
+  .contact {
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    font-size: 0.95rem;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--accent);
+    border-radius: var(--radius);
+    padding: 0.9rem 1.1rem;
+    margin: 0 0 1rem;
+  }
+  .contact .addr { user-select: all; font-weight: 500; overflow-wrap: anywhere; }
+
+  footer {
+    margin-top: 3rem;
+    padding-top: 1.4rem;
+    border-top: 1px solid var(--line);
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+  }
+</style>
+</head>
+<body>
+
+
+<div class="bar">
+  <div class="bar-inner">
+    <div class="brand">Media Rescue <span>&middot; Android</span></div>
+    <div class="langs" role="group" aria-label="Language">
+      <button type="button" id="btn-en" aria-pressed="true">English</button>
+      <button type="button" id="btn-pt" aria-pressed="false">Português</button>
+    </div>
+  </div>
+</div>
+
+<main>
+  <section id="doc-en">
+    <h1>Privacy Policy</h1>
+    <dl class="meta">
+      <dt>App</dt><dd>Media Rescue</dd>
+      <dt>Package ID</dt><dd><code>com.rsbapps.mediarescue</code></dd>
+      <dt>Developer</dt><dd>Ricardo Schmidt Bittencourt</dd>
+      <dt>Contact</dt><dd>ricardoschmidtb@gmail.com</dd>
+      <dt>Effective</dt><dd>September 25, 2026</dd>
+    </dl>
+
+    <p class="lede">Media Rescue runs entirely on your device. It does not collect,
+    transmit or store any personal data, file, photo or video on our servers or
+    anyone else's. There is no advertising, no tracking and no usage analytics. No
+    account is required and nothing leaves your phone.</p>
+
+    <h2>What the app accesses</h2>
+    <p>To do its job, the app reads media that is already on your device:</p>
+    <div class="scroll">
+      <table>
+        <thead>
+          <tr><th>What it accesses</th><th>Why</th><th>Leaves device?</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Photos and videos in the system trash (&ldquo;Recently deleted&rdquo;)</td>
+            <td>To list what can still be restored</td><td>No</td>
+          </tr>
+          <tr>
+            <td>Folders you grant through the Android folder picker (thumbnail cache, WhatsApp media)</td>
+            <td>To find recoverable temporary files</td><td>No</td>
+          </tr>
+          <tr>
+            <td>The destination folder you choose</td>
+            <td>To write the restored copies</td><td>No</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Access is <strong>read-only</strong>, except for the destination folder you
+    pick yourself to receive restored files. The app never deletes files.</p>
+
+    <h2>Permissions</h2>
+    <ul>
+      <li><code>READ_MEDIA_IMAGES</code> and <code>READ_MEDIA_VIDEO</code>
+      (Android 13 and newer), and <code>READ_EXTERNAL_STORAGE</code>
+      (Android 10 to 12): to read the device's photo and video library, including
+      the system trash. Broad access is required because Android's photo picker
+      never returns deleted items &mdash; which is the entire purpose of the app.</li>
+      <li><code>com.android.vending.BILLING</code>: to process the one-time
+      unlock purchase.</li>
+    </ul>
+    <p>The app does <strong>not</strong> request all-files access
+    (<code>MANAGE_EXTERNAL_STORAGE</code>), the camera, the microphone, contacts,
+    location, or the list of installed apps.</p>
+
+    <h2>In-app purchases</h2>
+    <p>The optional unlock is processed by Google Play Billing. We never receive,
+    see or store card or payment details. The app keeps only a local flag that a
+    purchase exists; the source of truth is your Google Play account. Google's
+    handling of your data is governed by Google's own privacy policy.</p>
+
+    <h2>Data stored on the device</h2>
+    <p>Stored locally, and only locally:</p>
+    <ul>
+      <li>whether you have seen the initial disclosure screen;</li>
+      <li>how many free restores have been used;</li>
+      <li>whether the unlock was purchased;</li>
+      <li>the address of the destination folder you chose.</li>
+    </ul>
+    <p>Uninstalling the app erases all of it.</p>
+
+    <h2>Children</h2>
+    <p>The app is not directed at children under 13 and collects no data from
+    anyone, of any age.</p>
+
+    <h2>Your rights (GDPR / LGPD)</h2>
+    <p>Because we collect no personal data, there is nothing in our custody to
+    access, correct, export or delete.</p>
+    <div class="contact">
+      Questions about this policy? Write to
+      <span class="addr">ricardoschmidtb@gmail.com</span> &mdash; we answer within 30 days.
+    </div>
+
+    <h2>Changes</h2>
+    <p>If this policy changes, the new version is published at this same address
+    with a revised effective date. Material changes are announced inside the app.</p>
+  </section>
+
+  <section id="doc-pt" hidden>
+    <h1>Política de Privacidade</h1>
+    <dl class="meta">
+      <dt>App</dt><dd>Media Rescue</dd>
+      <dt>ID do pacote</dt><dd><code>com.rsbapps.mediarescue</code></dd>
+      <dt>Responsável</dt><dd>Ricardo Schmidt Bittencourt</dd>
+      <dt>Contato</dt><dd>ricardoschmidtb@gmail.com</dd>
+      <dt>Vigente desde</dt><dd>25 de setembro de 2026</dd>
+    </dl>
+
+    <p class="lede">O Media Rescue funciona inteiramente no seu aparelho. Ele não
+    coleta, não transmite e não armazena nenhum dado pessoal, arquivo, foto ou
+    vídeo em servidores nossos ou de terceiros. Não há publicidade, rastreadores
+    nem análise de uso. Não é preciso criar conta e nada sai do seu celular.</p>
+
+    <h2>Que dados o app acessa</h2>
+    <p>Para fazer o que se propõe, o app precisa ler mídia que já está no seu
+    aparelho:</p>
+    <div class="scroll">
+      <table>
+        <thead>
+          <tr><th>O que acessa</th><th>Por quê</th><th>Sai do aparelho?</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Fotos e vídeos na lixeira do sistema (&ldquo;Excluídos recentemente&rdquo;)</td>
+            <td>Listar o que ainda pode ser restaurado</td><td>Não</td>
+          </tr>
+          <tr>
+            <td>Pastas que você libera pelo seletor do Android (cache de miniaturas, mídia do WhatsApp)</td>
+            <td>Encontrar arquivos temporários recuperáveis</td><td>Não</td>
+          </tr>
+          <tr>
+            <td>Pasta de destino que você escolhe</td>
+            <td>Gravar as cópias restauradas</td><td>Não</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p>O acesso é <strong>somente de leitura</strong>, exceto na pasta de destino
+    que você mesmo escolhe para receber os arquivos restaurados. O app não apaga
+    arquivos.</p>
+
+    <h2>Permissões</h2>
+    <ul>
+      <li><code>READ_MEDIA_IMAGES</code> e <code>READ_MEDIA_VIDEO</code>
+      (Android 13 ou mais novo) e <code>READ_EXTERNAL_STORAGE</code>
+      (Android 10 a 12): ler a biblioteca de fotos e vídeos do aparelho,
+      incluindo a lixeira do sistema. O acesso amplo é necessário porque o
+      seletor de fotos do Android nunca devolve itens excluídos &mdash; que é
+      justamente o objetivo do app.</li>
+      <li><code>com.android.vending.BILLING</code>: processar a compra única de
+      desbloqueio.</li>
+    </ul>
+    <p>O app <strong>não</strong> pede acesso a todos os arquivos
+    (<code>MANAGE_EXTERNAL_STORAGE</code>), nem à câmera, microfone, contatos,
+    localização ou à lista de apps instalados.</p>
+
+    <h2>Compras no app</h2>
+    <p>O desbloqueio opcional é processado pelo Google Play Billing. Nós não
+    recebemos, não vemos e não guardamos dados de cartão ou de pagamento. O app
+    guarda apenas um indicador local de que a compra existe; a fonte da verdade é
+    a sua conta do Google Play. O tratamento dos seus dados pelo Google segue a
+    Política de Privacidade do Google.</p>
+
+    <h2>Dados armazenados no aparelho</h2>
+    <p>Guardados localmente, e só localmente:</p>
+    <ul>
+      <li>se você já viu a tela de aviso inicial;</li>
+      <li>quantas restaurações gratuitas foram usadas;</li>
+      <li>se o desbloqueio foi comprado;</li>
+      <li>o endereço da pasta de destino escolhida.</li>
+    </ul>
+    <p>Desinstalar o app apaga todos esses dados.</p>
+
+    <h2>Crianças</h2>
+    <p>O app não é direcionado a menores de 13 anos e não coleta dados de
+    ninguém, independentemente da idade.</p>
+
+    <h2>Seus direitos (LGPD / GDPR)</h2>
+    <p>Como não coletamos dados pessoais, não há dados sob nossa guarda para
+    acessar, corrigir, exportar ou excluir.</p>
+    <div class="contact">
+      Dúvidas sobre esta política? Escreva para
+      <span class="addr">ricardoschmidtb@gmail.com</span> &mdash; respondemos em até 30 dias.
+    </div>
+
+    <h2>Alterações</h2>
+    <p>Se esta política mudar, a nova versão será publicada neste mesmo endereço,
+    com a data de vigência revista. Mudanças relevantes serão avisadas dentro do
+    app.</p>
+  </section>
+
+  <footer>
+    Media Rescue &middot; <code>com.rsbapps.mediarescue</code> &middot;
+    Effective September 25, 2026 / vigente desde 25 de setembro de 2026.
+  </footer>
+</main>
+
+<script>
+  (function () {
+    var btnEn = document.getElementById('btn-en');
+    var btnPt = document.getElementById('btn-pt');
+    var docEn = document.getElementById('doc-en');
+    var docPt = document.getElementById('doc-pt');
+
+    function apply(lang) {
+      var pt = lang === 'pt';
+      docEn.hidden = pt;
+      docPt.hidden = !pt;
+      btnEn.setAttribute('aria-pressed', String(!pt));
+      btnPt.setAttribute('aria-pressed', String(pt));
+      try { localStorage.setItem('mr-policy-lang', pt ? 'pt' : 'en'); } catch (e) {}
+    }
+
+    btnEn.addEventListener('click', function () { apply('en'); });
+    btnPt.addEventListener('click', function () { apply('pt'); });
+
+    var start = 'en';
+    try {
+      var saved = localStorage.getItem('mr-policy-lang');
+      if (saved === 'pt' || saved === 'en') start = saved;
+      else if ((navigator.language || '').toLowerCase().indexOf('pt') === 0) start = 'pt';
+    } catch (e) {}
+    apply(start);
+  })();
+</script>
+
+</body>
+</html>
